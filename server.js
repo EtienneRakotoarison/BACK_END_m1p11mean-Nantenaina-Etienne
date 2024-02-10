@@ -14,14 +14,13 @@ mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: 
     .catch(error => console.log(error));
 
 
-    const port = 3001
-    app.listen(port, function () {
-      console.log(`listenivdng on ${port}`)
-    })
+const port = 3001
+app.listen(port, function() {
+    console.log(`listenivdng on ${port}`)
+})
 
 
-    app.use(cors());
- app.use(bodyParser.urlencoded({ extended: true }));
- app.use(bodyParser.json());
- app.use(routes);
-
+app.use(cors());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(routes);
